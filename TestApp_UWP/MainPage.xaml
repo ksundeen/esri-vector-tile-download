@@ -5,7 +5,9 @@
     xmlns:local="using:TestApp_UWP"
     xmlns:esri="using:Esri.ArcGISRuntime.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:forms="using:Xamarin.Forms"
+    xmlns:esriUI="using:Esri.ArcGISRuntime.UI.Controls"
     mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <esri:MapView 
@@ -31,6 +33,12 @@
                         Command="{x:Bind ViewModel.DownloadRasterTilesCommand}"
                         IsEnabled="True"
                         Content="Export Raster Tiles"/>
+                <Button x:Name="OfflineDownloadButton"
+                        Width="250"
+                        Margin="10"
+                        Command="{x:Bind ViewModel.DownloadOfflineMapCommand}"
+                        IsEnabled="True"
+                        Content="Export Offline Map Layers"/>
             </StackPanel>
         </Border>
     </Grid>

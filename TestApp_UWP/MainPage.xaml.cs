@@ -16,6 +16,7 @@ using Esri.ArcGISRuntime.Data;
 using Esri.ArcGISRuntime.Mapping;
 using Esri.ArcGISRuntime.UI;
 using Esri.ArcGISRuntime.UI.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 namespace TestApp_UWP
 {
@@ -27,6 +28,7 @@ namespace TestApp_UWP
 		public MainPage()
 		{
 			this.InitializeComponent();
+
 		}
 
         /// <summary>
@@ -34,8 +36,6 @@ namespace TestApp_UWP
         /// </summary>
         public MapViewModel ViewModel { get; } = new MapViewModel();
 
-        // Map initialization logic is contained in MapViewModel.cs
-
-
-    }
+		// Map initialization logic is contained in MapViewModel.cs
+	}
 }
